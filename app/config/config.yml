@@ -88,8 +88,22 @@ assetic:
     filters:
         cssrewrite: ~
 
-_liip_imagine:
-    resource: "@LiipImagineBundle/Resources/config/routing.xml"
+liip_imagine :
+
+    # configure resolvers
+    resolvers :
+
+        # setup the default resolver
+        default :
+
+            # use the default web path
+            web_path : ~
+
+    # your filter sets are defined here
+    filter_sets :
+
+        # use the default cache configuration
+        cache : ~
                 
 templating:
     engines: ['twig']
