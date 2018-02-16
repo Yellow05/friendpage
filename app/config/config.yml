@@ -87,3 +87,9 @@ assetic:
     use_controller: '%kernel.debug%'
     filters:
         cssrewrite: ~
+
+_liip_imagine:
+    resource: "@LiipImagineBundle/Resources/config/routing.xml"
+                
+templating:
+    engines: ['twig']
