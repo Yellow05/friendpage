@@ -39,6 +39,7 @@ twig:
 # Doctrine Configuration
 doctrine:
     dbal:
+        url: "%env(DATABASE_URL)%"
         driver: pdo_mysql
         host: '%database_host%'
         port: '%database_port%'
@@ -79,3 +80,10 @@ knp_paginator:
         pagination: '@KnpPaginator/Pagination/twitter_bootstrap_v4_pagination.html.twig'     # sliding pagination controls template                                    
         sortable: '@KnpPaginator/Pagination/sortable_link.html.twig' # sort link template                                
         filtration: '@KnpPaginator/Pagination/filtration.html.twig'  # filters template
+
+# app/config/config.yml
+assetic:
+    debug:          '%kernel.debug%'
+    use_controller: '%kernel.debug%'
+    filters:
+        cssrewrite: ~

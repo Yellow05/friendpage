@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+
+<div id="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h1 class="page-header">Super karbiuratorius</h1>
+          <h3>
+          Karbiuratorius yra variklio dalis, kurioje degalai maišosi su oru. Su šiuo SUPER karbiuratoriumi jūsų automobilis niekada neges, nes degalų ir oro sumašymo proporcija visada bus tobula. 
+          </h3>
+          <form action="/product/order">
+          	<h5>Dabar tik: <b>199.99$</b>
+            <button type="submit" class="btn btn-theme">Užsakyti</button></h5>
+          </form>
+          Užsisakykite jau dabar ir išsiųsime per 2 darbo dienas.
+        </div>
+        <div class="col-lg-4 col-lg-offset-2">
+          {% image 'images/karbiuratorius.png' %}
+    		<img src="{{ asset_url }}" alt="Nuotraukos nėra" style = "width:100%;height: 100%"/>
+			{% endimage %}
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+{% endblock %}
