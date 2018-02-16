@@ -105,5 +105,3 @@ liip_imagine :
         # use the default cache configuration
         cache : ~
                 
-templating:
-    engines: ['twig']
