@@ -39,7 +39,7 @@ class OrdersListController extends Controller
         //     $request->query->getInt('limit', 5)
         // );
 
-        return $this->render('orders_list/index.html.twig'/*, array('orders' => $result)*/);
+        return $this->render('orders_list/index.html.twig', array('orders' => $query/*$result*/));
     }
     
 }
