@@ -7,7 +7,32 @@
 
 
 
-
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Nr.</th>
+      <th scope="col">Data</th>
+      <th scope="col">Vardas</th>
+      <th scope="col">Pavardė</th>
+      <th scope="col">E. paštas</th>
+      <th scope="col">Adresas</th>
+      <th scope="col">Telefonas</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for order in orders %}
+    <tr>
+      <th scope="row">{{ order.id }}</th>
+      <td>{{ order.date|date('Y-m-d H:i:s') }}</td>
+      <td>{{ order.firstName }}</td>
+      <td>{{ order.lastName }}</td>
+      <td>{{ order.email }}</td>
+      <td>{{ order.address }}</td>
+      <td>{{ order.phone }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
 
 
 
