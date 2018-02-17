@@ -18,7 +18,7 @@ class OrdersListController extends Controller
         
         $queryBuilder = $em->getRepository('AppBundle:Order')->createQueryBuilder('orders');
 
-        if($request->query->getAlnum('filter')){
+        /*if($request->query->getAlnum('filter')){
         $queryBuilder->where('orders.firstName LIKE :firstName')
             ->setParameter('firstName', '%'.$request->query->getAlnum('filter').'%');
         }
@@ -37,7 +37,7 @@ class OrdersListController extends Controller
             $query,
             $request->query->getInt('page', 1),
             $request->query->getInt('limit', 5)
-        );
+        );*/
 
         dump(get_class($paginator));
 
