@@ -18,10 +18,10 @@ class OrdersListController extends Controller
         
         $queryBuilder = $em->getRepository('AppBundle:Order')->createQueryBuilder('orders');
 
-        // if($request->query->getAlnum('filter')){
-        // $queryBuilder->where('orders.firstName LIKE :firstName')
-        //     ->setParameter('firstName', '%'.$request->query->getAlnum('filter').'%');
-        // }
+        if($request->query->getAlnum('filter')){
+        $queryBuilder->where('orders.firstName LIKE :firstName')
+            ->setParameter('firstName', '%'.$request->query->getAlnum('filter').'%');
+        }
 
         $query = $queryBuilder->getQuery();
 
