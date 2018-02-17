@@ -26,20 +26,20 @@ class OrdersListController extends Controller
         $query = $queryBuilder->getQuery();
 
 
-        // // $dql = "SELECT orders FROM AppBundle:Order orders";
-        // // $query = $em->createQuery($dql);
+        // $dql = "SELECT orders FROM AppBundle:Order orders";
+        // $query = $em->createQuery($dql);
 
-        // /**
-        // *  @var $paginator \Knp\Component\Pager\Paginator
-        // */
-        // $paginator = $this->get('knp_paginator');
-        // $result = $paginator->paginate(
-        //     $query,
-        //     $request->query->getInt('page', 1),
-        //     $request->query->getInt('limit', 5)
-        // );
+        /**
+        *  @var $paginator \Knp\Component\Pager\Paginator
+        */
+        $paginator = $this->get('knp_paginator');
+        $result = $paginator->paginate(
+            $query,
+            $request->query->getInt('page', 1),
+            $request->query->getInt('limit', 5)
+        );
 
-        return $this->render('orders_list/index.html.twig', array('orders' => $query/*$result*/));
+        return $this->render('orders_list/index.html.twig', array('orders' => $result));
     }
     
 }
