@@ -18,13 +18,13 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="col">Nr.</th>
-      <th scope="col">Data</th>
-      <th scope="col">Vardas</th>
-      <th scope="col">Pavardė</th>
-      <th scope="col">E. paštas</th>
-      <th scope="col">Adresas</th>
-      <th scope="col">Telefonas</th>
+      <th scope="col">{{ knp_pagination_sortable(orders, 'Nr. ', 'orders.id') }}</th>
+      <th scope="col">{{ knp_pagination_sortable(orders, 'Data', 'orders.date') }}</th>
+      <th scope="col">{{ knp_pagination_sortable(orders, 'Vardas', 'orders.firstName') }}</th>
+      <th scope="col">{{ knp_pagination_sortable(orders, 'Pavardė', 'orders.lastName') }}</th>
+      <th scope="col">{{ knp_pagination_sortable(orders, 'E. paštas', 'orders.email') }}</th>
+      <th scope="col">{{ knp_pagination_sortable(orders, 'Adresas', 'orders.address') }}</th>
+      <th scope="col">{{ knp_pagination_sortable(orders, 'Telefonas', 'orders.phone') }}</th>
     </tr>
   </thead>
   <tbody>
