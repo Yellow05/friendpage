@@ -18,26 +18,26 @@ class OrdersListController extends Controller
         
         $queryBuilder = $em->getRepository('AppBundle:Order')->createQueryBuilder('orders');
 
-        /*if($request->query->getAlnum('filter')){
-        $queryBuilder->where('orders.firstName LIKE :firstName')
-            ->setParameter('firstName', '%'.$request->query->getAlnum('filter').'%');
-        }
+        // if($request->query->getAlnum('filter')){
+        // $queryBuilder->where('orders.firstName LIKE :firstName')
+        //     ->setParameter('firstName', '%'.$request->query->getAlnum('filter').'%');
+        // }
 
-        $query = $queryBuilder->getQuery();
+        // $query = $queryBuilder->getQuery();
 
 
-        // $dql = "SELECT orders FROM AppBundle:Order orders";
-        // $query = $em->createQuery($dql);
+        // // $dql = "SELECT orders FROM AppBundle:Order orders";
+        // // $query = $em->createQuery($dql);
 
-        /**
-        *  @var $paginator \Knp\Component\Pager\Paginator
-        */
-        $paginator = $this->get('knp_paginator');
-        $result = $paginator->paginate(
-            $query,
-            $request->query->getInt('page', 1),
-            $request->query->getInt('limit', 5)
-        );*/
+        // /**
+        // *  @var $paginator \Knp\Component\Pager\Paginator
+        // */
+        // $paginator = $this->get('knp_paginator');
+        // $result = $paginator->paginate(
+        //     $query,
+        //     $request->query->getInt('page', 1),
+        //     $request->query->getInt('limit', 5)
+        // );
 
         dump(get_class($paginator));
 
