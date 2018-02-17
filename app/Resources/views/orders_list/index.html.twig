@@ -5,45 +5,10 @@
 {% block body %}
 <h2 class="page-header">Užsakymų sąrašas</h2>
 
-<div class="form-inline">
-  <form action="{{ path('orders') }}" method="get">
-    <div class="form-group">
-      <label for="filter">Ieškoti pagal vardą </label>
-      <input class="form-control" name="filter" style = "margin-right:15px;margin-left:15px" type="text">
-    <button type="submit" class="btn btn-default btn-sm">Ieškoti</button>
-    </div>
-  </form>
-</div>
 
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th scope="col">{{ knp_pagination_sortable(orders, 'Nr. ', 'orders.id') }}</th>
-      <th scope="col">{{ knp_pagination_sortable(orders, 'Data', 'orders.date') }}</th>
-      <th scope="col">{{ knp_pagination_sortable(orders, 'Vardas', 'orders.firstName') }}</th>
-      <th scope="col">{{ knp_pagination_sortable(orders, 'Pavardė', 'orders.lastName') }}</th>
-      <th scope="col">{{ knp_pagination_sortable(orders, 'E. paštas', 'orders.email') }}</th>
-      <th scope="col">{{ knp_pagination_sortable(orders, 'Adresas', 'orders.address') }}</th>
-      <th scope="col">{{ knp_pagination_sortable(orders, 'Telefonas', 'orders.phone') }}</th>
-    </tr>
-  </thead>
-  <tbody>
-  {% for order in orders %}
-    <tr>
-      <th scope="row">{{ order.id }}</th>
-      <td>{{ order.date|date('Y-m-d H:i:s') }}</td>
-      <td>{{ order.firstName }}</td>
-      <td>{{ order.lastName }}</td>
-      <td>{{ order.email }}</td>
-      <td>{{ order.address }}</td>
-      <td>{{ order.phone }}</td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
 
-<div class="navigation">
-    {{ knp_pagination_render(orders) }}
-</div>
+
+
+
 
 {% endblock %}
