@@ -14,16 +14,16 @@ class OrdersListController extends Controller
      */
     public function ordersListAction(Request $request)
     {
-        //$em = $this->getDoctrine()->getManager();
+        $em = $this->getDoctrine()->getManager();
         
-        //$queryBuilder = $em->getRepository('AppBundle:Order')->createQueryBuilder('orders');
+        $queryBuilder = $em->getRepository('AppBundle:Order')->createQueryBuilder('orders');
 
         // if($request->query->getAlnum('filter')){
         // $queryBuilder->where('orders.firstName LIKE :firstName')
         //     ->setParameter('firstName', '%'.$request->query->getAlnum('filter').'%');
         // }
 
-        // $query = $queryBuilder->getQuery();
+        $query = $queryBuilder->getQuery();
 
 
         // // $dql = "SELECT orders FROM AppBundle:Order orders";
