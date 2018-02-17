@@ -14,9 +14,9 @@ class OrdersListController extends Controller
      */
     public function ordersListAction(Request $request)
     {
-        $em = $this->getDoctrine()->getManager();
+        //$em = $this->getDoctrine()->getManager();
         
-        $queryBuilder = $em->getRepository('AppBundle:Order')->createQueryBuilder('orders');
+        //$queryBuilder = $em->getRepository('AppBundle:Order')->createQueryBuilder('orders');
 
         // if($request->query->getAlnum('filter')){
         // $queryBuilder->where('orders.firstName LIKE :firstName')
@@ -39,9 +39,7 @@ class OrdersListController extends Controller
         //     $request->query->getInt('limit', 5)
         // );
 
-        dump(get_class($paginator));
-
-        return $this->render('orders_list/index.html.twig', array('orders' => $result));
+        return $this->render('orders_list/index.html.twig'/*, array('orders' => $result)*/);
     }
     
 }
